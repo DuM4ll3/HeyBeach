@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  Utils.swift
 //  Hey Beach
 //
 //  Created by Rafael Ferraz on 23/12/18.

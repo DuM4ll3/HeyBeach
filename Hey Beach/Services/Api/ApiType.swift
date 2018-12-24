@@ -12,8 +12,8 @@ public typealias Parameters = [String: Any]
 public typealias HTTPHeader = [String: String]
 
 public enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
+    case get    = "GET"
+    case post   = "POST"
     case delete = "DELETE"
 }
 

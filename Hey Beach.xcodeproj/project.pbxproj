@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7B9D937C21CFC11D00703C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D937B21CFC11D00703C87 /* AppDelegate.swift */; };
-		7B9D937E21CFC11D00703C87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D937D21CFC11D00703C87 /* ViewController.swift */; };
 		7B9D938121CFC11D00703C87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D937F21CFC11D00703C87 /* Main.storyboard */; };
 		7B9D938321CFC12000703C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D938221CFC12000703C87 /* Assets.xcassets */; };
 		7B9D938621CFC12000703C87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D938421CFC12000703C87 /* LaunchScreen.storyboard */; };
@@ -17,16 +16,28 @@
 		7B9D939C21CFF20400703C87 /* HeyBeachApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D939B21CFF20400703C87 /* HeyBeachApi.swift */; };
 		7B9D939E21CFFC0D00703C87 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D939D21CFFC0D00703C87 /* NetworkProvider.swift */; };
 		7B9D93A621D0249600703C87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A521D0249600703C87 /* User.swift */; };
-		7B9D93A821D0276700703C87 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A721D0276700703C87 /* Extensions.swift */; };
+		7B9D93A821D0276700703C87 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A721D0276700703C87 /* Utils.swift */; };
 		7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A921D1023D00703C87 /* UserService.swift */; };
 		7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93AB21D10D8100703C87 /* ImageService.swift */; };
 		7B9D93AE21D1309A00703C87 /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93AD21D1309A00703C87 /* ServiceResult.swift */; };
+		7B9D93B021D1455F00703C87 /* Images.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D93AF21D1455F00703C87 /* Images.json */; };
+		7BDCC33321D172F6004C4853 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33221D172F6004C4853 /* AuthView.swift */; };
+		7BDCC33621D17492004C4853 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33521D17492004C4853 /* Presentable.swift */; };
+		7BDCC33B21D178A1004C4853 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33A21D178A1004C4853 /* AuthViewController.swift */; };
+		7BDCC33E21D179C4004C4853 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33D21D179C4004C4853 /* UIViewControllerExtensions.swift */; };
+		7BDCC34521D17C01004C4853 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC34421D17C01004C4853 /* ImagesView.swift */; };
+		7BE3936921D17CC000CBB1C1 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3936821D17CC000CBB1C1 /* ImagesViewController.swift */; };
+		7BE3936F21D1804500CBB1C1 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3936E21D1804500CBB1C1 /* Storyboards.swift */; };
+		7BE3937321D1812D00CBB1C1 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3937221D1812D00CBB1C1 /* NSObjectExtension.swift */; };
+		7BE3937521D183A200CBB1C1 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE3937421D183A200CBB1C1 /* Auth.storyboard */; };
+		7BE3937721D183B500CBB1C1 /* Images.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE3937621D183B500CBB1C1 /* Images.storyboard */; };
+		7BE3937A21D1852700CBB1C1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3937921D1852700CBB1C1 /* TabBarViewController.swift */; };
+		7BE3937C21D1853600CBB1C1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3937B21D1853600CBB1C1 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B9D937821CFC11D00703C87 /* Hey Beach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey Beach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9D937B21CFC11D00703C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B9D937D21CFC11D00703C87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B9D938021CFC11D00703C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B9D938221CFC12000703C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B9D938521CFC12000703C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,10 +47,23 @@
 		7B9D939B21CFF20400703C87 /* HeyBeachApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyBeachApi.swift; sourceTree = "<group>"; };
 		7B9D939D21CFFC0D00703C87 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		7B9D93A521D0249600703C87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		7B9D93A721D0276700703C87 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7B9D93A721D0276700703C87 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7B9D93A921D1023D00703C87 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7B9D93AB21D10D8100703C87 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		7B9D93AD21D1309A00703C87 /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
+		7B9D93AF21D1455F00703C87 /* Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Images.json; sourceTree = "<group>"; };
+		7BDCC33221D172F6004C4853 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		7BDCC33521D17492004C4853 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		7BDCC33A21D178A1004C4853 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		7BDCC33D21D179C4004C4853 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		7BDCC34421D17C01004C4853 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
+		7BE3936821D17CC000CBB1C1 /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		7BE3936E21D1804500CBB1C1 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		7BE3937221D1812D00CBB1C1 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		7BE3937421D183A200CBB1C1 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		7BE3937621D183B500CBB1C1 /* Images.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Images.storyboard; sourceTree = "<group>"; };
+		7BE3937921D1852700CBB1C1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7BE3937B21D1853600CBB1C1 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,19 +96,20 @@
 		7B9D937A21CFC11D00703C87 /* Hey Beach */ = {
 			isa = PBXGroup;
 			children = (
-				7B9D938D21CFC14B00703C87 /* Service */,
-				7B9D937B21CFC11D00703C87 /* AppDelegate.swift */,
-				7B9D937D21CFC11D00703C87 /* ViewController.swift */,
-				7B9D937F21CFC11D00703C87 /* Main.storyboard */,
+				7BE3936B21D17F5D00CBB1C1 /* Application */,
+				7BE3936A21D17F3F00CBB1C1 /* Storyboards */,
+				7BDCC33121D17218004C4853 /* Flows */,
+				7B9D938D21CFC14B00703C87 /* Services */,
+				7BDCC33C21D1797C004C4853 /* Extensions */,
+				7BDCC33421D17464004C4853 /* Protocols */,
 				7B9D938221CFC12000703C87 /* Assets.xcassets */,
-				7B9D938421CFC12000703C87 /* LaunchScreen.storyboard */,
 				7B9D938721CFC12000703C87 /* Info.plist */,
-				7B9D93A721D0276700703C87 /* Extensions.swift */,
+				7B9D93AF21D1455F00703C87 /* Images.json */,
 			);
 			path = "Hey Beach";
 			sourceTree = "<group>";
 		};
-		7B9D938D21CFC14B00703C87 /* Service */ = {
+		7B9D938D21CFC14B00703C87 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				7B9D939621CFDA5700703C87 /* Api */,
@@ -93,7 +118,7 @@
 				7B9D93AB21D10D8100703C87 /* ImageService.swift */,
 				7B9D93AD21D1309A00703C87 /* ServiceResult.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		7B9D939321CFCD2C00703C87 /* Model */ = {
@@ -113,6 +138,97 @@
 				7B9D939B21CFF20400703C87 /* HeyBeachApi.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		7BDCC33121D17218004C4853 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				7BE3937821D184F300CBB1C1 /* Main */,
+				7BDCC33921D17887004C4853 /* Auth */,
+				7BDCC33F21D17A6E004C4853 /* Images */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		7BDCC33421D17464004C4853 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7BDCC33521D17492004C4853 /* Presentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7BDCC33921D17887004C4853 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7BDCC33221D172F6004C4853 /* AuthView.swift */,
+				7BDCC33A21D178A1004C4853 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		7BDCC33C21D1797C004C4853 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7B9D93A721D0276700703C87 /* Utils.swift */,
+				7BDCC33D21D179C4004C4853 /* UIViewControllerExtensions.swift */,
+				7BE3937221D1812D00CBB1C1 /* NSObjectExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7BDCC33F21D17A6E004C4853 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7BDCC34421D17C01004C4853 /* ImagesView.swift */,
+				7BE3936821D17CC000CBB1C1 /* ImagesViewController.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7BE3936A21D17F3F00CBB1C1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7BE3936E21D1804500CBB1C1 /* Storyboards.swift */,
+				7B9D937F21CFC11D00703C87 /* Main.storyboard */,
+				7BE3937421D183A200CBB1C1 /* Auth.storyboard */,
+				7BE3937621D183B500CBB1C1 /* Images.storyboard */,
+				7B9D938421CFC12000703C87 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7BE3936B21D17F5D00CBB1C1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7BE3936C21D17F8A00CBB1C1 /* Factories */,
+				7BE3936D21D17FB000CBB1C1 /* Router */,
+				7B9D937B21CFC11D00703C87 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		7BE3936C21D17F8A00CBB1C1 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		7BE3936D21D17FB000CBB1C1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		7BE3937821D184F300CBB1C1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7BE3937B21D1853600CBB1C1 /* TabBarView.swift */,
+				7BE3937921D1852700CBB1C1 /* TabBarViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B9D938621CFC12000703C87 /* LaunchScreen.storyboard in Resources */,
+				7B9D93B021D1455F00703C87 /* Images.json in Resources */,
+				7BE3937521D183A200CBB1C1 /* Auth.storyboard in Resources */,
 				7B9D938321CFC12000703C87 /* Assets.xcassets in Resources */,
+				7BE3937721D183B500CBB1C1 /* Images.storyboard in Resources */,
 				7B9D938121CFC11D00703C87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,16 +305,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B9D937E21CFC11D00703C87 /* ViewController.swift in Sources */,
 				7B9D939E21CFFC0D00703C87 /* NetworkProvider.swift in Sources */,
+				7BDCC33321D172F6004C4853 /* AuthView.swift in Sources */,
 				7B9D93AE21D1309A00703C87 /* ServiceResult.swift in Sources */,
 				7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */,
 				7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */,
 				7B9D937C21CFC11D00703C87 /* AppDelegate.swift in Sources */,
-				7B9D93A821D0276700703C87 /* Extensions.swift in Sources */,
+				7BDCC33E21D179C4004C4853 /* UIViewControllerExtensions.swift in Sources */,
+				7BE3937321D1812D00CBB1C1 /* NSObjectExtension.swift in Sources */,
+				7BE3936F21D1804500CBB1C1 /* Storyboards.swift in Sources */,
+				7BE3937A21D1852700CBB1C1 /* TabBarViewController.swift in Sources */,
+				7B9D93A821D0276700703C87 /* Utils.swift in Sources */,
 				7B9D939A21CFEF4200703C87 /* ApiType.swift in Sources */,
 				7B9D939521CFCD4900703C87 /* Image.swift in Sources */,
+				7BDCC33B21D178A1004C4853 /* AuthViewController.swift in Sources */,
+				7BDCC34521D17C01004C4853 /* ImagesView.swift in Sources */,
+				7BE3936921D17CC000CBB1C1 /* ImagesViewController.swift in Sources */,
+				7BDCC33621D17492004C4853 /* Presentable.swift in Sources */,
 				7B9D939C21CFF20400703C87 /* HeyBeachApi.swift in Sources */,
+				7BE3937C21D1853600CBB1C1 /* TabBarView.swift in Sources */,
 				7B9D93A621D0249600703C87 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,11 +23,11 @@ extension HeyBeachApi: ApiType {
     
     var path: String {
         switch self {
-        case .beaches: return "/beaches"
+        case .beaches:  return "/beaches"
         case .register: return "/user/register"
-        case .login: return "/user/login"
-        case .logout: return "/user/logout"
-        case .me: return "/user/me"
+        case .login:    return "/user/login"
+        case .logout:   return "/user/logout"
+        case .me:       return "/user/me"
         }
     }
     
