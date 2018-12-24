@@ -58,6 +58,15 @@ extension HeyBeachApi: ApiType {
     }
     
     var headers: HTTPHeader? {
-        return ["Content-type": "application/json"]
+        switch self {
+        case .me,
+             .logout:
+            return ["x-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzIxMDZiYmYwODNlYzAwMTI0OGJlODkiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTQ1NjY4NjExfQ.cYtMg_n69HObHUOYUi_MQByZL0YeSBoAW-59SXVk7DY"] // TODO: get from some property
+        case .login,
+             .register:
+            return ["Content-type": "application/json"]
+        case .beaches:
+            return nil
+        }
     }
 }

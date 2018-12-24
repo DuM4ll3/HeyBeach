@@ -8,11 +8,16 @@
 
 import Foundation
 
-typealias NetworkCompletion = (Data?, Error?) -> Void
+typealias NetworkCompletion = (NetworkResult) -> Void
 
 protocol NetworkProviderType: AnyObject {
     associatedtype Api: ApiType
     func request(_ api: Api, completion: @escaping NetworkCompletion)
+}
+
+enum NetworkResult {
+    case success(Data?)
+    case error(Error)
 }
 
 class NetworkProvider<Api: ApiType>: NetworkProviderType {
@@ -23,11 +28,14 @@ class NetworkProvider<Api: ApiType>: NetworkProviderType {
             guard let httpResponse = response as? HTTPURLResponse,
                 (200 ..< 400) ~= httpResponse.statusCode,
                 error == nil else {
-                    completion(nil, error)
+                    completion(.error(error!))
                     return
             }
-//            httpResponse.allHeaderFields["x-auth"]
-            completion(data, nil)
+            //TODO: move this code to userService
+            if let jwt = httpResponse.allHeaderFields["x-auth"] as? String {
+                print(jwt)
+            }
+            completion(.success(data))
         }
         
         task.resume()
@@ -41,8 +49,7 @@ class NetworkProvider<Api: ApiType>: NetworkProviderType {
         request.allHTTPHeaderFields = api.headers
         
         switch api.task {
-        // TODO: refactor this
-        case .request: request.allHTTPHeaderFields = ["x-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzIwMjRiNGYwODNlYzAwMTI0OGJlN2EiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTQ1NjEzMzcyfQ.6JsIzngCpg5SrO3rTQaOyZ-ukQqwUNIxjCDMhc_wme4"]
+        case .request: break // or return request
         case let .requestParameters(parameters): configure(&request, with: parameters)
         case let .requestJSONEncodable(body): configure(&request, with: body)
         }

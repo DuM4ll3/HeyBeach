@@ -6,6 +6,9 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
+// TODO: needs to decode/encode manually
+// "{\"_id\":\"5c2106bbf083ec001248be89\",\"email\":\"testt3@test.com\"}"
+
 import Foundation
 
 struct User: Codable {

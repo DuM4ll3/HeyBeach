@@ -18,6 +18,9 @@
 		7B9D939E21CFFC0D00703C87 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D939D21CFFC0D00703C87 /* NetworkProvider.swift */; };
 		7B9D93A621D0249600703C87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A521D0249600703C87 /* User.swift */; };
 		7B9D93A821D0276700703C87 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A721D0276700703C87 /* Extensions.swift */; };
+		7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A921D1023D00703C87 /* UserService.swift */; };
+		7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93AB21D10D8100703C87 /* ImageService.swift */; };
+		7B9D93AE21D1309A00703C87 /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93AD21D1309A00703C87 /* ServiceResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		7B9D939D21CFFC0D00703C87 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		7B9D93A521D0249600703C87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B9D93A721D0276700703C87 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7B9D93A921D1023D00703C87 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		7B9D93AB21D10D8100703C87 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		7B9D93AD21D1309A00703C87 /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 			children = (
 				7B9D939621CFDA5700703C87 /* Api */,
 				7B9D939D21CFFC0D00703C87 /* NetworkProvider.swift */,
+				7B9D93A921D1023D00703C87 /* UserService.swift */,
+				7B9D93AB21D10D8100703C87 /* ImageService.swift */,
+				7B9D93AD21D1309A00703C87 /* ServiceResult.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -179,6 +188,9 @@
 			files = (
 				7B9D937E21CFC11D00703C87 /* ViewController.swift in Sources */,
 				7B9D939E21CFFC0D00703C87 /* NetworkProvider.swift in Sources */,
+				7B9D93AE21D1309A00703C87 /* ServiceResult.swift in Sources */,
+				7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */,
+				7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */,
 				7B9D937C21CFC11D00703C87 /* AppDelegate.swift in Sources */,
 				7B9D93A821D0276700703C87 /* Extensions.swift in Sources */,
 				7B9D939A21CFEF4200703C87 /* ApiType.swift in Sources */,
