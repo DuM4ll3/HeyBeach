@@ -9,6 +9,10 @@
 import Foundation
 
 enum HeyBeachApi {
+    case register(_ user: User)
+    case login(_ user: User)
+    case logout
+    case me
     case beaches(page: Int)
 }
 
@@ -20,18 +24,40 @@ extension HeyBeachApi: ApiType {
     var path: String {
         switch self {
         case .beaches: return "/beaches"
+        case .register: return "/user/register"
+        case .login: return "/user/login"
+        case .logout: return "/user/logout"
+        case .me: return "/user/me"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .beaches: return .get
+        case .beaches,
+             .me:
+            return .get
+        case .register,
+             .login:
+            return .post
+        case .logout:
+            return .delete
         }
     }
     
     var task: Task {
         switch self {
-        case .beaches(let page): return .requestParameters(parameters: ["page" : page])
+        case .me,
+             .logout:
+            return .request
+        case let .beaches(page):
+            return .requestParameters(parameters: ["page" : page])
+        case let .register(user),
+             let .login(user):
+            return .requestJSONEncodable(user)
         }
+    }
+    
+    var headers: HTTPHeader? {
+        return ["Content-type": "application/json"]
     }
 }

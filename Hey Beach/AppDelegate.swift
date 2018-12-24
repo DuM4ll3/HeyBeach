@@ -15,21 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let provider = NetworkProvider<HeyBeachApi>()
-        provider.request(.beaches(page: 1)) { (data, error) in
-            if let json = data {
-                do {
-                    let images = try JSONDecoder().decode([Image].self, from: json)
-                    print(images.count)
-                    
-                } catch {
-                    print(error)
-                }
-            }
-        }
-        
-        
         return true
     }
 }
-
