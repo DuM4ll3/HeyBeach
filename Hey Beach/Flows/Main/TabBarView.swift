@@ -6,5 +6,10 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-protocol TabBarView: Presentable {
+import UIKit
+
+protocol TabBarView: BaseView {
+    var onImageFlowSelect: ((UINavigationController) -> ())? { get set }
+    var onUserFlowSelect: ((UINavigationController) -> ())? { get set }
+    var onViewDidLoad: ((UINavigationController) -> ())? { get set }
 }

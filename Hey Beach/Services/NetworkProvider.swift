@@ -10,7 +10,7 @@ import Foundation
 
 typealias NetworkCompletion = (NetworkResult) -> Void
 
-protocol NetworkProviderType: AnyObject {
+protocol NetworkProviderType {
     associatedtype Api: ApiType
     func request(_ api: Api, completion: @escaping NetworkCompletion)
 }

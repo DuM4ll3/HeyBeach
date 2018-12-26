@@ -14,21 +14,14 @@ extension UIViewController {
         return storyboard.instantiateViewController(withIdentifier: identifier) as! T
     }
     
-    class func inStoryboard(_ storyboard: UIStoryboard, identifier: String) -> Self {
-        return instantiateControllerInStoryboard(storyboard, identifier: identifier)
-    }
-    
-    class func inStoryboard(_ storyboard: UIStoryboard) -> Self {
-        return inStoryboard(storyboard, identifier: nameOfClass)
-    }
-    
     class func fromStoryboard(_ storyboard: Storyboards) -> Self {
-        return inStoryboard(UIStoryboard(name: storyboard.rawValue, bundle: nil), identifier: nameOfClass)
+        let storyboard = UIStoryboard(name: storyboard.rawValue, bundle: nil)
+        return instantiateControllerInStoryboard(storyboard, identifier: nameOfClass)
     }
 }
 
 extension UIViewController: Presentable {
-    func toPresent() -> UIViewController {
+    func toPresent() -> UIViewController? {
         return self
     }
 }

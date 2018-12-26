@@ -28,11 +28,19 @@
 		7BDCC34521D17C01004C4853 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC34421D17C01004C4853 /* ImagesView.swift */; };
 		7BE3936921D17CC000CBB1C1 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3936821D17CC000CBB1C1 /* ImagesViewController.swift */; };
 		7BE3936F21D1804500CBB1C1 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3936E21D1804500CBB1C1 /* Storyboards.swift */; };
-		7BE3937321D1812D00CBB1C1 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3937221D1812D00CBB1C1 /* NSObjectExtension.swift */; };
 		7BE3937521D183A200CBB1C1 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE3937421D183A200CBB1C1 /* Auth.storyboard */; };
 		7BE3937721D183B500CBB1C1 /* Images.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE3937621D183B500CBB1C1 /* Images.storyboard */; };
 		7BE3937A21D1852700CBB1C1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3937921D1852700CBB1C1 /* TabBarViewController.swift */; };
 		7BE3937C21D1853600CBB1C1 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3937B21D1853600CBB1C1 /* TabBarView.swift */; };
+		7BE3938221D1896300CBB1C1 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938121D1896300CBB1C1 /* ModuleFactory.swift */; };
+		7BE3938421D18C3100CBB1C1 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938321D18C3100CBB1C1 /* CoordinatorFactory.swift */; };
+		7BE3938621D18CE200CBB1C1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938521D18CE200CBB1C1 /* Coordinator.swift */; };
+		7BE3938821D1944000CBB1C1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938721D1944000CBB1C1 /* BaseView.swift */; };
+		7BE3938A21D26B0600CBB1C1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938921D26B0600CBB1C1 /* Router.swift */; };
+		7BE3938C21D2B64100CBB1C1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938B21D2B64100CBB1C1 /* AppCoordinator.swift */; };
+		7BE3938E21D2BD9000CBB1C1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938D21D2BD9000CBB1C1 /* TabBarCoordinator.swift */; };
+		7BE3939021D2C18300CBB1C1 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938F21D2C18300CBB1C1 /* AuthCoordinator.swift */; };
+		7BE3939221D2C42600CBB1C1 /* ImagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3939121D2C42600CBB1C1 /* ImagesCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,11 +67,19 @@
 		7BDCC34421D17C01004C4853 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
 		7BE3936821D17CC000CBB1C1 /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
 		7BE3936E21D1804500CBB1C1 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
-		7BE3937221D1812D00CBB1C1 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		7BE3937421D183A200CBB1C1 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		7BE3937621D183B500CBB1C1 /* Images.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Images.storyboard; sourceTree = "<group>"; };
 		7BE3937921D1852700CBB1C1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7BE3937B21D1853600CBB1C1 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		7BE3938121D1896300CBB1C1 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		7BE3938321D18C3100CBB1C1 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		7BE3938521D18CE200CBB1C1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7BE3938721D1944000CBB1C1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		7BE3938921D26B0600CBB1C1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7BE3938B21D2B64100CBB1C1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7BE3938D21D2BD9000CBB1C1 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		7BE3938F21D2C18300CBB1C1 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		7BE3939121D2C42600CBB1C1 /* ImagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +117,6 @@
 				7BDCC33121D17218004C4853 /* Flows */,
 				7B9D938D21CFC14B00703C87 /* Services */,
 				7BDCC33C21D1797C004C4853 /* Extensions */,
-				7BDCC33421D17464004C4853 /* Protocols */,
 				7B9D938221CFC12000703C87 /* Assets.xcassets */,
 				7B9D938721CFC12000703C87 /* Info.plist */,
 				7B9D93AF21D1455F00703C87 /* Images.json */,
@@ -154,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				7BDCC33521D17492004C4853 /* Presentable.swift */,
+				7BE3938521D18CE200CBB1C1 /* Coordinator.swift */,
+				7BE3938721D1944000CBB1C1 /* BaseView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -163,6 +180,7 @@
 			children = (
 				7BDCC33221D172F6004C4853 /* AuthView.swift */,
 				7BDCC33A21D178A1004C4853 /* AuthViewController.swift */,
+				7BE3938F21D2C18300CBB1C1 /* AuthCoordinator.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -172,7 +190,6 @@
 			children = (
 				7B9D93A721D0276700703C87 /* Utils.swift */,
 				7BDCC33D21D179C4004C4853 /* UIViewControllerExtensions.swift */,
-				7BE3937221D1812D00CBB1C1 /* NSObjectExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +199,7 @@
 			children = (
 				7BDCC34421D17C01004C4853 /* ImagesView.swift */,
 				7BE3936821D17CC000CBB1C1 /* ImagesViewController.swift */,
+				7BE3939121D2C42600CBB1C1 /* ImagesCoordinator.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -201,9 +219,11 @@
 		7BE3936B21D17F5D00CBB1C1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				7B9D937B21CFC11D00703C87 /* AppDelegate.swift */,
+				7BE3938B21D2B64100CBB1C1 /* AppCoordinator.swift */,
 				7BE3936C21D17F8A00CBB1C1 /* Factories */,
 				7BE3936D21D17FB000CBB1C1 /* Router */,
-				7B9D937B21CFC11D00703C87 /* AppDelegate.swift */,
+				7BDCC33421D17464004C4853 /* Protocols */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -211,6 +231,8 @@
 		7BE3936C21D17F8A00CBB1C1 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				7BE3938121D1896300CBB1C1 /* ModuleFactory.swift */,
+				7BE3938321D18C3100CBB1C1 /* CoordinatorFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -218,6 +240,7 @@
 		7BE3936D21D17FB000CBB1C1 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				7BE3938921D26B0600CBB1C1 /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -227,6 +250,7 @@
 			children = (
 				7BE3937B21D1853600CBB1C1 /* TabBarView.swift */,
 				7BE3937921D1852700CBB1C1 /* TabBarViewController.swift */,
+				7BE3938D21D2BD9000CBB1C1 /* TabBarCoordinator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -307,21 +331,29 @@
 			files = (
 				7B9D939E21CFFC0D00703C87 /* NetworkProvider.swift in Sources */,
 				7BDCC33321D172F6004C4853 /* AuthView.swift in Sources */,
+				7BE3938C21D2B64100CBB1C1 /* AppCoordinator.swift in Sources */,
 				7B9D93AE21D1309A00703C87 /* ServiceResult.swift in Sources */,
+				7BE3938221D1896300CBB1C1 /* ModuleFactory.swift in Sources */,
 				7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */,
+				7BE3938E21D2BD9000CBB1C1 /* TabBarCoordinator.swift in Sources */,
 				7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */,
+				7BE3939221D2C42600CBB1C1 /* ImagesCoordinator.swift in Sources */,
+				7BE3938621D18CE200CBB1C1 /* Coordinator.swift in Sources */,
 				7B9D937C21CFC11D00703C87 /* AppDelegate.swift in Sources */,
 				7BDCC33E21D179C4004C4853 /* UIViewControllerExtensions.swift in Sources */,
-				7BE3937321D1812D00CBB1C1 /* NSObjectExtension.swift in Sources */,
 				7BE3936F21D1804500CBB1C1 /* Storyboards.swift in Sources */,
+				7BE3938421D18C3100CBB1C1 /* CoordinatorFactory.swift in Sources */,
 				7BE3937A21D1852700CBB1C1 /* TabBarViewController.swift in Sources */,
 				7B9D93A821D0276700703C87 /* Utils.swift in Sources */,
 				7B9D939A21CFEF4200703C87 /* ApiType.swift in Sources */,
+				7BE3939021D2C18300CBB1C1 /* AuthCoordinator.swift in Sources */,
+				7BE3938A21D26B0600CBB1C1 /* Router.swift in Sources */,
 				7B9D939521CFCD4900703C87 /* Image.swift in Sources */,
 				7BDCC33B21D178A1004C4853 /* AuthViewController.swift in Sources */,
 				7BDCC34521D17C01004C4853 /* ImagesView.swift in Sources */,
 				7BE3936921D17CC000CBB1C1 /* ImagesViewController.swift in Sources */,
 				7BDCC33621D17492004C4853 /* Presentable.swift in Sources */,
+				7BE3938821D1944000CBB1C1 /* BaseView.swift in Sources */,
 				7B9D939C21CFF20400703C87 /* HeyBeachApi.swift in Sources */,
 				7BE3937C21D1853600CBB1C1 /* TabBarView.swift in Sources */,
 				7B9D93A621D0249600703C87 /* User.swift in Sources */,

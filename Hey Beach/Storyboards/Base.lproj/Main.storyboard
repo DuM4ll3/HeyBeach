@@ -58,7 +58,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="ldb-jC-cRi">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" id="7W3-CT-kbS" customClass="TabBarViewController" customModule="Hey_Beach" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="7W3-CT-kbS" customClass="TabBarViewController" customModule="Hey_Beach" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mge-GO-yTj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

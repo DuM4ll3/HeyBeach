@@ -7,6 +7,6 @@
 //
 
 /// actions to be defined by its coordinator
-protocol AuthView: Presentable {
+protocol AuthView: BaseView {
     var onLoginButtonTap: (() -> Void)? { get set }
 }

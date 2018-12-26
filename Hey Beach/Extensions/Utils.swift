@@ -8,6 +8,12 @@
 
 import Foundation
 
+extension NSObject {
+    class var nameOfClass: String {
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+}
+
 extension Encodable {
     func encode(with encoder: JSONEncoder = JSONEncoder()) throws -> Data {
         return try encoder.encode(self)

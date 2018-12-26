@@ -12,18 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var rootController: UINavigationController {
+        return self.window!.rootViewController as! UINavigationController
+    }
+
+    private lazy var appCoordinator: Coordinator = makeCoordinator()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let service = ImageService()
-        service.getImages { (result) in
-            switch result {
-            case let .success(images):
-                print(images?.first?.id)
-            case .failure:
-                break
-            }
-        }
+        
+        appCoordinator.start()
         return true
+    }
+    
+    private func makeCoordinator() -> Coordinator {
+        return AppCoordinator(router: Router(rootController: rootController),
+                              coordinatorFactory: CoordinatorFactory())
     }
 }
