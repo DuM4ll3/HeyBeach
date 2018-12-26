@@ -10,10 +10,12 @@ final class ImagesCoordinator: BaseCoordinator {
     
     private let factory: ImagesModuleFactory
     private let router: RouterType
+    private let service: ImageServiceType
     
-    init(router: RouterType, factory: ImagesModuleFactory) {
+    init(router: RouterType, factory: ImagesModuleFactory, service: ImageServiceType) {
         self.factory = factory
         self.router = router
+        self.service = service
     }
     
     override func start() {
@@ -21,20 +23,21 @@ final class ImagesCoordinator: BaseCoordinator {
     }
     
     private func showImages() {
-        var imagesView = factory.makeImagesView()
-        
-        let service: ImageServiceType = ImageService()
-        service.getImages { (result) in
-            switch result {
-            case let .success(images):
-                print(images?.first?.id)
-            case .failure:
-                break
-            }
-        }
-        
-        imagesView.display([])
+        let imagesView = factory.makeImagesView()
+        let completion = imagesCompletion(for: imagesView)
+        service.getImages(completion)
         
         router.push(imagesView)
+    }
+    
+    private func imagesCompletion(for view: ImagesView) -> (ServiceResult<[Image]>) -> Void {
+        return { (result) in
+            switch result {
+            case let .success(images):
+                view.display(images)
+            case let .failure(error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

@@ -7,7 +7,7 @@
 //
 
 final class ImagesViewController: UIViewController, ImagesView {
-    func display(_ images: [Image]) {
+    func display(_ images: [Image]?) {
         
     }
 }

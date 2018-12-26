@@ -10,10 +10,12 @@ final class AuthCoordinator: BaseCoordinator {
     
     private let factory: AuthModuleFactory
     private let router: RouterType
+    private let service: UserServiceType
     
-    init(router: RouterType, factory: AuthModuleFactory) {
+    init(router: RouterType, factory: AuthModuleFactory, service: UserServiceType) {
         self.factory = factory
         self.router = router
+        self.service = service
     }
     
     override func start() {
@@ -22,11 +24,11 @@ final class AuthCoordinator: BaseCoordinator {
     
     private func showAuth() {
         var authView = factory.makeAuthView()
+        let userService = service
         authView.onLoginButtonTap = {
-            let service: UserServiceType = UserService()
             let user = User(email: "test2@test.com", password: "password")
             let completion = self.userCompletion()
-            service.login(user, completion)
+            userService.login(user, completion)
         }
         
         router.push(authView)

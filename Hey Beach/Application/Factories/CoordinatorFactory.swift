@@ -21,17 +21,19 @@ final class CoordinatorFactory: CoordinatorFactoryType {
     
     func makeTabBarCoordinator() -> (coordinator: Coordinator, toPresent: Presentable?) {
         let controller = TabBarViewController.fromStoryboard(.main)
-        let coordinator = TabBarCoordinator(tabBarView: controller, coordinatorFactory: CoordinatorFactory.shared)
+        let coordinator = TabBarCoordinator(tabBarView: controller, coordinatorFactory: self)
         return (coordinator, controller)
     }
     
     func makeAuthCoordinator(navController: UINavigationController) -> Coordinator {
-        let coordinator = AuthCoordinator(router: router(navController), factory: ModuleFactory.shared)
+        let service = UserService()
+        let coordinator = AuthCoordinator(router: router(navController), factory: ModuleFactory.shared, service: service)
         return coordinator
     }
     
     func makeImagesCoordinator(navController: UINavigationController) -> Coordinator {
-        let coordinator = ImagesCoordinator(router: router(navController), factory: ModuleFactory.shared)
+        let service = ImageService()
+        let coordinator = ImagesCoordinator(router: router(navController), factory: ModuleFactory.shared, service: service)
         return coordinator
     }
     

@@ -7,5 +7,5 @@
 //
 
 protocol ImagesView: BaseView {
-    func display(_ images: [Image])
+    func display(_ images: [Image]?)
 }

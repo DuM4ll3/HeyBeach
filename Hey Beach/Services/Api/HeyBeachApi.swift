@@ -59,7 +59,7 @@ extension HeyBeachApi: ApiType {
         switch self {
         case .me,
              .logout:
-            return ["x-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzIwMjRiNGYwODNlYzAwMTI0OGJlN2EiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTQ1Nzg5ODA0fQ.uvCzIuFimb7cwtkpbQwxxwNrCspQr_2p63CQh_tUjbA"] // TODO: get from some property
+            return ["x-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzIwMjRiNGYwODNlYzAwMTI0OGJlN2EiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTQ1Nzg5ODA0fQ.uvCzIuFimb7cwtkpbQwxxwNrCspQr_2p63CQh_tUjbA"] // TODO: get from some property - UserDefaults
         case .login,
              .register:
             return ["Content-type": "application/json"]
