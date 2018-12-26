@@ -21,12 +21,6 @@ protocol UserServiceType: NetworkService {
 
 struct UserService: UserServiceType {
     
-    private let heyBeach: NetworkProvider<HeyBeachApi>
-    
-    init(heyBeach: NetworkProvider<HeyBeachApi> = NetworkProvider<HeyBeachApi>()) {
-        self.heyBeach = heyBeach
-    }
-    
     func register(_ user: User, _ completion: @escaping UserServiceCompletion) {
         request(.register(user), with: completion)
     }

@@ -22,7 +22,7 @@ final class TabBarCoordinator: BaseCoordinator {
         tabBarView.onImageFlowSelect = runImagesFlow()
     }
     
-    private func runAuthFlow() -> ((UINavigationController) -> ()) {
+    private func runAuthFlow() -> ((UINavigationController) -> Void) {
         return { [unowned self] navController in
             if navController.viewControllers.isEmpty {
                 let authCoordinator = self.coordinatorFactory.makeAuthCoordinator(navController: navController)
@@ -32,7 +32,7 @@ final class TabBarCoordinator: BaseCoordinator {
         }
     }
     
-    private func runImagesFlow() -> ((UINavigationController) -> ()) {
+    private func runImagesFlow() -> ((UINavigationController) -> Void) {
         return { [unowned self] navController in
             if navController.viewControllers.isEmpty {
                 let imagesCoordinator = self.coordinatorFactory.makeImagesCoordinator(navController: navController)

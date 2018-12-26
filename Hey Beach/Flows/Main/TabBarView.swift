@@ -7,7 +7,7 @@
 //
 
 protocol TabBarView: BaseView {
-    var onImageFlowSelect: ((UINavigationController) -> ())? { get set }
-    var onUserFlowSelect: ((UINavigationController) -> ())? { get set }
-    var onViewDidLoad: ((UINavigationController) -> ())? { get set }
+    var onImageFlowSelect: ((UINavigationController) -> Void)? { get set }
+    var onUserFlowSelect: ((UINavigationController) -> Void)? { get set }
+    var onViewDidLoad: ((UINavigationController) -> Void)? { get set }
 }

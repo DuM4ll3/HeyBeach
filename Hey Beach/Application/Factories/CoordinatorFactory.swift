@@ -14,19 +14,24 @@ protocol CoordinatorFactoryType {
 }
 
 final class CoordinatorFactory: CoordinatorFactoryType {
+    
+    static let shared = CoordinatorFactory()
+    // The private prevents initialization outside of the class.
+    private init() {}
+    
     func makeTabBarCoordinator() -> (coordinator: Coordinator, toPresent: Presentable?) {
         let controller = TabBarViewController.fromStoryboard(.main)
-        let coordinator = TabBarCoordinator(tabBarView: controller, coordinatorFactory: CoordinatorFactory())
+        let coordinator = TabBarCoordinator(tabBarView: controller, coordinatorFactory: CoordinatorFactory.shared)
         return (coordinator, controller)
     }
     
     func makeAuthCoordinator(navController: UINavigationController) -> Coordinator {
-        let coordinator = AuthCoordinator(router: router(navController), factory: ModuleFactory())
+        let coordinator = AuthCoordinator(router: router(navController), factory: ModuleFactory.shared)
         return coordinator
     }
     
     func makeImagesCoordinator(navController: UINavigationController) -> Coordinator {
-        let coordinator = ImagesCoordinator(router: router(navController), factory: ModuleFactory())
+        let coordinator = ImagesCoordinator(router: router(navController), factory: ModuleFactory.shared)
         return coordinator
     }
     

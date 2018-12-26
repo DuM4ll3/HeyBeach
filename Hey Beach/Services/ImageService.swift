@@ -14,12 +14,6 @@ protocol ImageServiceType: NetworkService {
 
 struct ImageService: ImageServiceType {
     
-    private let heyBeach: NetworkProvider<HeyBeachApi>
-    
-    init(heyBeach: NetworkProvider<HeyBeachApi> = NetworkProvider<HeyBeachApi>()) {
-        self.heyBeach = heyBeach
-    }
-    
     func getImages(_ completion: @escaping ImageServiceCompletion) {
         guard let url = Bundle.main.url(forResource: "Images", withExtension: "json"),
             let data = try? Data(contentsOf: url)

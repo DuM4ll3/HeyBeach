@@ -14,10 +14,16 @@ enum ServiceResult<T: Decodable> {
 }
 
 protocol NetworkService {
+    var heyBeach: NetworkProvider<HeyBeachApi> { get }
+    
     func decode<T: Decodable>(_ result: NetworkResult, for type: T.Type?, completion: @escaping NetworkServiceCompletion<T>)
 }
 
 extension NetworkService {
+    var heyBeach: NetworkProvider<HeyBeachApi> {
+        return NetworkProvider<HeyBeachApi>()
+    }
+    
     func decode<T: Decodable>(_ result: NetworkResult, for type: T.Type? = nil, completion: @escaping NetworkServiceCompletion<T>) {
         DispatchQueue.main.async {
             switch result {

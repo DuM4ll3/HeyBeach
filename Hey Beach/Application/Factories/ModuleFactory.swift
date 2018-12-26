@@ -18,6 +18,10 @@ final class ModuleFactory:
     AuthModuleFactory,
     ImagesModuleFactory {
     
+    static let shared = ModuleFactory()
+    // The private prevents initialization outside of the class.
+    private init() {}
+    
     func makeAuthView() -> AuthView {
         return AuthViewController.fromStoryboard(.auth)
     }
