@@ -6,8 +6,6 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import Foundation
-
 struct Image: Decodable {
     
     struct Dimension {

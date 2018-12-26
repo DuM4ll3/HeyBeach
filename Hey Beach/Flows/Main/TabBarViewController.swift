@@ -6,8 +6,6 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import UIKit
-
 final class TabBarViewController: UITabBarController, TabBarView {
     // - MARK: TabBarView
     var onImageFlowSelect: ((UINavigationController) -> ())?

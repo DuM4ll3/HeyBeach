@@ -6,8 +6,6 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import UIKit
-
 protocol TabBarView: BaseView {
     var onImageFlowSelect: ((UINavigationController) -> ())? { get set }
     var onUserFlowSelect: ((UINavigationController) -> ())? { get set }

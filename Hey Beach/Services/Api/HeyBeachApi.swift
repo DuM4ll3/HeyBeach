@@ -6,8 +6,6 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import Foundation
-
 enum HeyBeachApi {
     case register(_ user: User)
     case login(_ user: User)
@@ -61,7 +59,7 @@ extension HeyBeachApi: ApiType {
         switch self {
         case .me,
              .logout:
-            return ["x-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzIxMDZiYmYwODNlYzAwMTI0OGJlODkiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTQ1NjY4NjExfQ.cYtMg_n69HObHUOYUi_MQByZL0YeSBoAW-59SXVk7DY"] // TODO: get from some property
+            return ["x-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzIwMjRiNGYwODNlYzAwMTI0OGJlN2EiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTQ1Nzg5ODA0fQ.uvCzIuFimb7cwtkpbQwxxwNrCspQr_2p63CQh_tUjbA"] // TODO: get from some property
         case .login,
              .register:
             return ["Content-type": "application/json"]

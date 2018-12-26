@@ -6,8 +6,6 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import UIKit
-
 final class ImagesViewController: UIViewController, ImagesView {
     func display(_ images: [Image]) {
         

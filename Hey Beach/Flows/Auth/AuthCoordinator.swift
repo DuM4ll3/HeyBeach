@@ -23,7 +23,16 @@ final class AuthCoordinator: BaseCoordinator {
     private func showAuth() {
         var authView = factory.makeAuthView()
         authView.onLoginButtonTap = {
-            // TODO...
+            let service: UserServiceType = UserService()
+            let user = User(email: "test2@test.com", password: "password")
+            service.login(user, { (result) in
+                switch result {
+                case .success:
+                    print("User logged in")
+                case let .failure(error):
+                    print(error.localizedDescription)
+                }
+            })
         }
         
         router.push(authView)

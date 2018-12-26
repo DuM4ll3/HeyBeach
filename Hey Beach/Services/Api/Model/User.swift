@@ -9,8 +9,6 @@
 // TODO: needs to decode/encode manually
 // "{\"_id\":\"5c2106bbf083ec001248be89\",\"email\":\"testt3@test.com\"}"
 
-import Foundation
-
 struct User: Codable {
     let email: String
     let password: String

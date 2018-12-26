@@ -6,8 +6,6 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import UIKit
-
 protocol CoordinatorFactoryType {
     // returns the coordinator & the rootController - TabBarViewController
     func makeTabBarCoordinator() -> (coordinator: Coordinator, toPresent: Presentable?)

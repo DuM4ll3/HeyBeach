@@ -6,11 +6,13 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import UIKit
-
 final class AuthViewController: UIViewController, AuthView {
     
     // - MARK: AuthView
     var onLoginButtonTap: (() -> Void)?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        onLoginButtonTap?()
+    }
 }

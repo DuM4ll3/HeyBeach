@@ -22,6 +22,17 @@ final class ImagesCoordinator: BaseCoordinator {
     
     private func showImages() {
         var imagesView = factory.makeImagesView()
+        
+        let service: ImageServiceType = ImageService()
+        service.getImages { (result) in
+            switch result {
+            case let .success(images):
+                print(images?.first?.id)
+            case .failure:
+                break
+            }
+        }
+        
         imagesView.display([])
         
         router.push(imagesView)

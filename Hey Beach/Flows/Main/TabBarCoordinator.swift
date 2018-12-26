@@ -6,8 +6,6 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import UIKit
-
 final class TabBarCoordinator: BaseCoordinator {
     
     private var tabBarView: TabBarView

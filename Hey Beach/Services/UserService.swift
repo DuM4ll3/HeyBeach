@@ -6,11 +6,9 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import Foundation
-
 typealias UserServiceCompletion = (ServiceResult<User>) -> Void
 
-protocol UserServiceType {
+protocol UserServiceType: NetworkService {
     /// register user in the api
     func register(_ user: User, _ completion: @escaping UserServiceCompletion)
     /// logs user in
@@ -43,30 +41,13 @@ struct UserService: UserServiceType {
     
     func getMe(_ completion: @escaping UserServiceCompletion) {
         heyBeach.request(.me) { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case let .success(data):
-                    if let json = data {
-                        let user: User? = try? User.decode(from: json)
-                        completion(.success(user))
-                    }
-                case let .error(error):
-                    completion(.failure(error))
-                }
-            }
+            self.decode(result, for: User.self, completion: completion)
         }
     }
     
     private func request(_ service: HeyBeachApi, with completion: @escaping UserServiceCompletion) {
         heyBeach.request(service) { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success:
-                    completion(.success(nil))
-                case let .error(error):
-                    completion(.failure(error))
-                }
-            }
+            self.decode(result, completion: completion)
         }
     }
 }

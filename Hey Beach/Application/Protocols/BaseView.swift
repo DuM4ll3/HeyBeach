@@ -6,6 +6,4 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import Foundation
-
 protocol BaseView: Presentable {}

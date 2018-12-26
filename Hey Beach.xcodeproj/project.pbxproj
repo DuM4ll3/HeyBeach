@@ -19,7 +19,6 @@
 		7B9D93A821D0276700703C87 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A721D0276700703C87 /* Utils.swift */; };
 		7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A921D1023D00703C87 /* UserService.swift */; };
 		7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93AB21D10D8100703C87 /* ImageService.swift */; };
-		7B9D93AE21D1309A00703C87 /* ServiceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93AD21D1309A00703C87 /* ServiceResult.swift */; };
 		7B9D93B021D1455F00703C87 /* Images.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D93AF21D1455F00703C87 /* Images.json */; };
 		7BDCC33321D172F6004C4853 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33221D172F6004C4853 /* AuthView.swift */; };
 		7BDCC33621D17492004C4853 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33521D17492004C4853 /* Presentable.swift */; };
@@ -41,6 +40,7 @@
 		7BE3938E21D2BD9000CBB1C1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938D21D2BD9000CBB1C1 /* TabBarCoordinator.swift */; };
 		7BE3939021D2C18300CBB1C1 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3938F21D2C18300CBB1C1 /* AuthCoordinator.swift */; };
 		7BE3939221D2C42600CBB1C1 /* ImagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3939121D2C42600CBB1C1 /* ImagesCoordinator.swift */; };
+		7BE3939B21D3148100CBB1C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3939A21D3148100CBB1C1 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +58,6 @@
 		7B9D93A721D0276700703C87 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7B9D93A921D1023D00703C87 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7B9D93AB21D10D8100703C87 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		7B9D93AD21D1309A00703C87 /* ServiceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResult.swift; sourceTree = "<group>"; };
 		7B9D93AF21D1455F00703C87 /* Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Images.json; sourceTree = "<group>"; };
 		7BDCC33221D172F6004C4853 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		7BDCC33521D17492004C4853 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -80,6 +79,8 @@
 		7BE3938D21D2BD9000CBB1C1 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		7BE3938F21D2C18300CBB1C1 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		7BE3939121D2C42600CBB1C1 /* ImagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCoordinator.swift; sourceTree = "<group>"; };
+		7BE3939321D3007300CBB1C1 /* Hey Beach-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hey Beach-Bridging-Header.h"; sourceTree = "<group>"; };
+		7BE3939A21D3148100CBB1C1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +132,7 @@
 				7B9D939D21CFFC0D00703C87 /* NetworkProvider.swift */,
 				7B9D93A921D1023D00703C87 /* UserService.swift */,
 				7B9D93AB21D10D8100703C87 /* ImageService.swift */,
-				7B9D93AD21D1309A00703C87 /* ServiceResult.swift */,
+				7BE3939A21D3148100CBB1C1 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,6 +222,7 @@
 			children = (
 				7B9D937B21CFC11D00703C87 /* AppDelegate.swift */,
 				7BE3938B21D2B64100CBB1C1 /* AppCoordinator.swift */,
+				7BE3939321D3007300CBB1C1 /* Hey Beach-Bridging-Header.h */,
 				7BE3936C21D17F8A00CBB1C1 /* Factories */,
 				7BE3936D21D17FB000CBB1C1 /* Router */,
 				7BDCC33421D17464004C4853 /* Protocols */,
@@ -287,6 +289,7 @@
 				TargetAttributes = {
 					7B9D937721CFC11D00703C87 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -332,7 +335,6 @@
 				7B9D939E21CFFC0D00703C87 /* NetworkProvider.swift in Sources */,
 				7BDCC33321D172F6004C4853 /* AuthView.swift in Sources */,
 				7BE3938C21D2B64100CBB1C1 /* AppCoordinator.swift in Sources */,
-				7B9D93AE21D1309A00703C87 /* ServiceResult.swift in Sources */,
 				7BE3938221D1896300CBB1C1 /* ModuleFactory.swift in Sources */,
 				7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */,
 				7BE3938E21D2BD9000CBB1C1 /* TabBarCoordinator.swift in Sources */,
@@ -355,6 +357,7 @@
 				7BDCC33621D17492004C4853 /* Presentable.swift in Sources */,
 				7BE3938821D1944000CBB1C1 /* BaseView.swift in Sources */,
 				7B9D939C21CFF20400703C87 /* HeyBeachApi.swift in Sources */,
+				7BE3939B21D3148100CBB1C1 /* NetworkService.swift in Sources */,
 				7BE3937C21D1853600CBB1C1 /* TabBarView.swift in Sources */,
 				7B9D93A621D0249600703C87 /* User.swift in Sources */,
 			);
@@ -502,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Hey Beach/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,6 +514,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Ferraz.Hey-Beach";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hey Beach/Application/Hey Beach-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -519,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Hey Beach/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -527,6 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Ferraz.Hey-Beach";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hey Beach/Application/Hey Beach-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

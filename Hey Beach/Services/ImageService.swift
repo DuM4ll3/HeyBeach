@@ -6,11 +6,9 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-import Foundation
-
 typealias ImageServiceCompletion = (ServiceResult<[Image]>) -> Void
 
-protocol ImageServiceType {
+protocol ImageServiceType: NetworkService {
     func getImages(_ completion: @escaping ImageServiceCompletion)
 }
 
@@ -24,22 +22,12 @@ struct ImageService: ImageServiceType {
     
     func getImages(_ completion: @escaping ImageServiceCompletion) {
         guard let url = Bundle.main.url(forResource: "Images", withExtension: "json"),
-            let data = try? Data(contentsOf: url),
-            let imageData = try? [Image].decode(from: data) else { return }
-        
-        completion(.success(imageData))
+            let data = try? Data(contentsOf: url)
+            else { return }
+        let result: NetworkResult = .success(data)
+        decode(result, for: [Image].self, completion: completion)
 //        heyBeach.request(.beaches(page: 1)) { (result) in
-//            DispatchQueue.main.async {
-//                switch result {
-//                case let .success(data):
-//                    if let json = data {
-//                        let images: [Image]? = try? [Image].decode(from: json)
-//                        completion(.success(images))
-//                    }
-//                case let .error(error):
-//                    completion(.failure(error))
-//                }
-//            }
+//            decode(result, for: [Image].self, completion: completion)
 //        }
     }
 }
