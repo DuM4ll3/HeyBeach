@@ -12,6 +12,7 @@ enum HeyBeachApi {
     case logout
     case me
     case beaches(page: Int)
+    case png(_ name: String)
 }
 
 extension HeyBeachApi: ApiType {
@@ -21,18 +22,26 @@ extension HeyBeachApi: ApiType {
     
     var path: String {
         switch self {
-        case .beaches:  return "/beaches"
-        case .register: return "/user/register"
-        case .login:    return "/user/login"
-        case .logout:   return "/user/logout"
-        case .me:       return "/user/me"
+        case .beaches:
+            return "/beaches"
+        case .register:
+            return "/user/register"
+        case .login:
+            return "/user/login"
+        case .logout:
+            return "/user/logout"
+        case .me:
+            return "/user/me"
+        case let .png(name):
+            return "/images/\(name)"
         }
     }
     
     var method: HTTPMethod {
         switch self {
         case .beaches,
-             .me:
+             .me,
+             .png:
             return .get
         case .register,
              .login:
@@ -45,7 +54,8 @@ extension HeyBeachApi: ApiType {
     var task: Task {
         switch self {
         case .me,
-             .logout:
+             .logout,
+             .png:
             return .request
         case let .beaches(page):
             return .requestParameters(parameters: ["page" : page])
@@ -63,7 +73,8 @@ extension HeyBeachApi: ApiType {
         case .login,
              .register:
             return ["Content-type": "application/json"]
-        case .beaches:
+        case .beaches,
+             .png:
             return nil
         }
     }

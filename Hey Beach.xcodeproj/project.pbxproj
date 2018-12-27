@@ -19,7 +19,6 @@
 		7B9D93A821D0276700703C87 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A721D0276700703C87 /* Utils.swift */; };
 		7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93A921D1023D00703C87 /* UserService.swift */; };
 		7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93AB21D10D8100703C87 /* ImageService.swift */; };
-		7B9D93B021D1455F00703C87 /* Images.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D93AF21D1455F00703C87 /* Images.json */; };
 		7BCBF1A721D4FC2000A7E0F8 /* ImagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF1A621D4FC2000A7E0F8 /* ImagesDataSource.swift */; };
 		7BCBF1A921D5041600A7E0F8 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF1A821D5041600A7E0F8 /* ImageViewCell.swift */; };
 		7BDCC33321D172F6004C4853 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33221D172F6004C4853 /* AuthView.swift */; };
@@ -60,7 +59,6 @@
 		7B9D93A721D0276700703C87 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7B9D93A921D1023D00703C87 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		7B9D93AB21D10D8100703C87 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		7B9D93AF21D1455F00703C87 /* Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Images.json; sourceTree = "<group>"; };
 		7BCBF1A621D4FC2000A7E0F8 /* ImagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDataSource.swift; sourceTree = "<group>"; };
 		7BCBF1A821D5041600A7E0F8 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		7BDCC33221D172F6004C4853 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				7BDCC33C21D1797C004C4853 /* Extensions */,
 				7B9D938221CFC12000703C87 /* Assets.xcassets */,
 				7B9D938721CFC12000703C87 /* Info.plist */,
-				7B9D93AF21D1455F00703C87 /* Images.json */,
 			);
 			path = "Hey Beach";
 			sourceTree = "<group>";
@@ -331,7 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B9D938621CFC12000703C87 /* LaunchScreen.storyboard in Resources */,
-				7B9D93B021D1455F00703C87 /* Images.json in Resources */,
 				7BE3937521D183A200CBB1C1 /* Auth.storyboard in Resources */,
 				7B9D938321CFC12000703C87 /* Assets.xcassets in Resources */,
 				7BE3937721D183B500CBB1C1 /* Images.storyboard in Resources */,

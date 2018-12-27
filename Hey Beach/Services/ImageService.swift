@@ -9,19 +9,36 @@
 typealias ImageServiceCompletion = (ServiceResult<[Image]>) -> Void
 
 protocol ImageServiceType: NetworkService {
+    /// get the list of images objects
     func getImages(_ completion: @escaping ImageServiceCompletion)
+    /// get a .png image
+    func getPNG(filename: String, _ completion: @escaping (UIImage?) -> Void)
 }
 
 struct ImageService: ImageServiceType {
     
     func getImages(_ completion: @escaping ImageServiceCompletion) {
-//        guard let url = Bundle.main.url(forResource: "Images", withExtension: "json"),
-//            let data = try? Data(contentsOf: url)
-//            else { return }
-//        let result: NetworkResult = .success(data)
-//        decode(result, for: [Image].self, completion: completion)
         heyBeach.request(.beaches(page: 1)) { (result) in
             self.decode(result, for: [Image].self, completion: completion)
+        }
+    }
+    
+    func getPNG(filename: String, _ completion: @escaping (UIImage?) -> Void) {
+        heyBeach.request(.png(filename)) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(data):
+                    if let data = data {
+                        let image = UIImage(data: data)
+                        completion(image)
+                        return
+                    }
+                    completion(nil)
+                case let .error(error):
+                    print(error.localizedDescription)
+                    completion(nil)
+                }
+            }
         }
     }
 }
