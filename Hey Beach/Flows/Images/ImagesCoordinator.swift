@@ -34,7 +34,7 @@ final class ImagesCoordinator: BaseCoordinator {
         return { (result) in
             switch result {
             case let .success(images):
-                view.display(images)
+                view.display(images ?? [])
             case let .failure(error):
                 print(error.localizedDescription)
             }

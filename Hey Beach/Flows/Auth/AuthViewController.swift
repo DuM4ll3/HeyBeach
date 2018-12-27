@@ -8,14 +8,6 @@
 
 final class AuthViewController: UIViewController, AuthView {
     
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        passwordTextField.isSecureTextEntry = true
-    }
-    
     // MARK: - AuthView
     // MARK: Inputs
     var onLoginButtonTap: ((User) -> Void)?
@@ -28,6 +20,14 @@ final class AuthViewController: UIViewController, AuthView {
     }
     
     // MARK: - ViewController
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        passwordTextField.isSecureTextEntry = true
+    }
+    
     @IBAction func didTapLoginButton() {
         guard let user = createUser() else { return }
         onLoginButtonTap?(user)

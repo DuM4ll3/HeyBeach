@@ -6,6 +6,10 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
-protocol ImagesView: BaseView {
-    func display(_ images: [Image]?)
+protocol ImagesViewOutputs {
+    func display(_ images: [Image])
 }
+
+typealias ImagesViewType = BaseView & ImagesViewOutputs
+
+protocol ImagesView: ImagesViewType {}
