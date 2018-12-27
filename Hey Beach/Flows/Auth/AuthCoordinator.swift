@@ -25,20 +25,29 @@ final class AuthCoordinator: BaseCoordinator {
     private func showAuth() {
         var authView = factory.makeAuthView()
         let userService = service
-        authView.onLoginButtonTap = {
-            let user = User(email: "test2@test.com", password: "password")
-            let completion = self.userCompletion()
+//        let user = User(email: "test2@test.com", password: "password")
+        let completion = userCompletion(view: authView)
+        
+        authView.onLoginButtonTap = { user in
             userService.login(user, completion)
+        }
+        
+        authView.onSignUpButtonTap = { user in
+            userService.register(user, completion)
+        }
+        
+        authView.onLogoutButtonTap = {
+            userService.logout(completion)
         }
         
         router.push(authView)
     }
     
-    private func userCompletion() -> (ServiceResult<User>) -> Void {
+    private func userCompletion(view: AuthView) -> (ServiceResult<User>) -> Void {
         return { result in
             switch result {
             case .success:
-                print("User logged in")
+                view.userDidLogin()
             case let .failure(error):
                 print(error.localizedDescription)
             }

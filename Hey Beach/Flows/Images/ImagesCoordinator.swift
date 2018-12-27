@@ -24,13 +24,13 @@ final class ImagesCoordinator: BaseCoordinator {
     
     private func showImages() {
         let imagesView = factory.makeImagesView()
-        let completion = imagesCompletion(for: imagesView)
+        let completion = imagesCompletion(view: imagesView)
         service.getImages(completion)
         
         router.push(imagesView)
     }
     
-    private func imagesCompletion(for view: ImagesView) -> (ServiceResult<[Image]>) -> Void {
+    private func imagesCompletion(view: ImagesView) -> (ServiceResult<[Image]>) -> Void {
         return { (result) in
             switch result {
             case let .success(images):

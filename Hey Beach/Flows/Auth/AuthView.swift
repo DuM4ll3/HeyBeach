@@ -7,6 +7,16 @@
 //
 
 /// actions to be defined by its coordinator
-protocol AuthView: BaseView {
-    var onLoginButtonTap: (() -> Void)? { get set }
+protocol AuthViewInputs {
+    var onLoginButtonTap: ((User) -> Void)? { get set }
+    var onSignUpButtonTap: ((User) -> Void)? { get set }
+    var onLogoutButtonTap: (() -> Void)? { get set }
 }
+
+protocol AuthViewOutputs {
+    func userDidLogin()
+}
+
+typealias AuthViewType = BaseView & AuthViewInputs & AuthViewOutputs
+
+protocol AuthView: AuthViewType {}

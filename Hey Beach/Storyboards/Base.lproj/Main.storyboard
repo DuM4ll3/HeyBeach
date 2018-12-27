@@ -13,20 +13,18 @@
         <!--Navigation Controller-->
         <scene sceneID="eWf-M9-sNt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cZI-aX-62M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController storyboardIdentifier="UINavigationController" id="QwA-OI-71O" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UINavigationController" navigationBarHidden="YES" id="QwA-OI-71O" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hrq-9V-otX">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZI-aX-62M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-774" y="114"/>
         </scene>
-        <!--Item 2-->
+        <!--Images-->
         <scene sceneID="XzR-ag-xu2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JUu-p2-LkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="SQ5-V4-BR3" customClass="UINavigationController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4GY-my-fKK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -34,15 +32,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="c0c-64-kYB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ORa-yV-1lr"/>
+                    <tabBarItem key="tabBarItem" title="Images" id="ORa-yV-1lr"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUu-p2-LkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1353" y="447"/>
         </scene>
-        <!--Item 1-->
+        <!--Account-->
         <scene sceneID="MhN-KS-du9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iQW-P0-AtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="zFy-bX-IQM" customClass="UINavigationController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nNr-9h-75w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -50,8 +48,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mgj-Dt-mpb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="8Gr-0M-mIP"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="8Gr-0M-mIP"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQW-P0-AtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1353" y="-219"/>
         </scene>
