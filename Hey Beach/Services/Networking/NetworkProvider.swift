@@ -19,6 +19,7 @@ enum NetworkResult {
 }
 
 class NetworkProvider<Api: ApiType>: NetworkProviderType {
+    
     func request(_ api: Api, completion: @escaping NetworkCompletion) {
         let session = URLSession.shared
         let request = buildRequest(to: api)
@@ -29,10 +30,19 @@ class NetworkProvider<Api: ApiType>: NetworkProviderType {
                     completion(.error(error!))
                     return
             }
-            //TODO: move this code to userService
+            //TODO: move this elsewhere
             if let jwt = httpResponse.allHeaderFields["x-auth"] as? String {
-                print(jwt)
+                UserDefaults.standard.set(jwt, forKey: "authToken")
             }
+            // TODO: refactor this
+            if api.path.contains("/images"),
+                let filename = api.path.split(separator: "/").last as NSString?,
+                let data = data {
+                let image = UIImage(data: data) ?? UIImage()
+                Cache.shared.setObject(image, forKey: filename)
+                print("\(filename) cached")
+            }
+            
             completion(.success(data))
         }
         
@@ -67,4 +77,11 @@ class NetworkProvider<Api: ApiType>: NetworkProviderType {
     private func configure(_ request: inout URLRequest, with body: Encodable) {
         request.httpBody = try? body.encode()
     }
+}
+
+//TODO refactor this
+class Cache {
+    static var shared = NSCache<NSString, UIImage>()
+    
+    private init() {}
 }

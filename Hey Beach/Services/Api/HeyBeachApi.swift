@@ -13,6 +13,10 @@ enum HeyBeachApi {
     case me
     case beaches(page: Int)
     case png(_ name: String)
+    
+    var authToken: String {
+        return UserDefaults.standard.string(forKey: "authToken") ?? ""
+    }
 }
 
 extension HeyBeachApi: ApiType {
@@ -69,7 +73,7 @@ extension HeyBeachApi: ApiType {
         switch self {
         case .me,
              .logout:
-            return ["x-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzIwMjRiNGYwODNlYzAwMTI0OGJlN2EiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTQ1Nzg5ODA0fQ.uvCzIuFimb7cwtkpbQwxxwNrCspQr_2p63CQh_tUjbA"] // TODO: get from some property - UserDefaults
+            return ["x-auth": authToken]
         case .login,
              .register:
             return ["Content-type": "application/json"]

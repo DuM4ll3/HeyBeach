@@ -24,6 +24,14 @@ struct ImageService: ImageServiceType {
     }
     
     func getPNG(filename: String, _ completion: @escaping (UIImage?) -> Void) {
+        // TODO: refactor this
+        if let filename = filename as NSString?,
+            let image = Cache.shared.object(forKey: filename) {
+            completion(image)
+            print("YOU GOT IT FROM CACHE")
+            return
+        }
+        
         heyBeach.request(.png(filename)) { (result) in
             DispatchQueue.main.async {
                 switch result {
