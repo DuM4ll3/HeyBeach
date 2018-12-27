@@ -23,3 +23,11 @@ extension Decodable {
         return try decoder.decode(Self.self, from: data)
     }
 }
+
+extension UIImageView {
+    func downloadImage(_ filename: String, with service: ImageServiceType = ImageService()) {
+        service.getPNG(filename: filename) { (image) in
+            self.image = image
+        }
+    }
+}

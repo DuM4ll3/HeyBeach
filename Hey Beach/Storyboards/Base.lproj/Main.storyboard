@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-774" y="114"/>
         </scene>
-        <!--Images-->
+        <!--Beaches-->
         <scene sceneID="XzR-ag-xu2">
             <objects>
                 <viewController id="SQ5-V4-BR3" customClass="UINavigationController" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="c0c-64-kYB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Images" id="ORa-yV-1lr"/>
+                    <tabBarItem key="tabBarItem" title="Beaches" id="ORa-yV-1lr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUu-p2-LkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Auth View Controller-->
+        <!--Account-->
         <scene sceneID="Wcr-vj-dPp">
             <objects>
                 <viewController storyboardIdentifier="AuthViewController" id="oaR-rS-A71" customClass="AuthViewController" customModule="Hey_Beach" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,6 +80,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UHL-3c-TAz"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Account" id="uOn-al-zQ1"/>
                     <connections>
                         <outlet property="emailTextField" destination="3ny-Cd-z6n" id="s1G-MR-Hes"/>
                         <outlet property="passwordTextField" destination="dgR-hY-fui" id="5aa-oT-ydY"/>

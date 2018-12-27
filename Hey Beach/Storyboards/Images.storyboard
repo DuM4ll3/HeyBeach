@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Images View Controller-->
+        <!--Beaches-->
         <scene sceneID="o80-0z-zNg">
             <objects>
                 <viewController storyboardIdentifier="ImagesViewController" id="0bt-lc-b08" customClass="ImagesViewController" customModule="Hey_Beach" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,6 +36,9 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2nt-jh-1XU">
                                                     <rect key="frame" x="20" y="10" width="335" height="118.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="118.5" id="1dN-fU-wx7"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq5-ad-sgN">
                                                     <rect key="frame" x="20" y="138.5" width="335" height="21"/>
@@ -71,6 +74,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7x5-tu-qxC"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Beaches" id="1xM-Eq-0kv"/>
                     <connections>
                         <outlet property="imagesTableView" destination="18o-74-29P" id="Y8Q-Lu-XsR"/>
                     </connections>
