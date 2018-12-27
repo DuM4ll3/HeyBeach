@@ -20,10 +20,10 @@ extension ImagesDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) // as! CellModel
+        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! ImageViewCell
         let image = images[indexPath.row]
-        // TODO use cell.model = image
-        cell.textLabel?.text = image.name
+        cell.model = image
+        
         return cell
     }
 }

@@ -21,6 +21,7 @@
 		7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D93AB21D10D8100703C87 /* ImageService.swift */; };
 		7B9D93B021D1455F00703C87 /* Images.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D93AF21D1455F00703C87 /* Images.json */; };
 		7BCBF1A721D4FC2000A7E0F8 /* ImagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF1A621D4FC2000A7E0F8 /* ImagesDataSource.swift */; };
+		7BCBF1A921D5041600A7E0F8 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF1A821D5041600A7E0F8 /* ImageViewCell.swift */; };
 		7BDCC33321D172F6004C4853 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33221D172F6004C4853 /* AuthView.swift */; };
 		7BDCC33621D17492004C4853 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33521D17492004C4853 /* Presentable.swift */; };
 		7BDCC33B21D178A1004C4853 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDCC33A21D178A1004C4853 /* AuthViewController.swift */; };
@@ -61,6 +62,7 @@
 		7B9D93AB21D10D8100703C87 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		7B9D93AF21D1455F00703C87 /* Images.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Images.json; sourceTree = "<group>"; };
 		7BCBF1A621D4FC2000A7E0F8 /* ImagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDataSource.swift; sourceTree = "<group>"; };
+		7BCBF1A821D5041600A7E0F8 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		7BDCC33221D172F6004C4853 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		7BDCC33521D17492004C4853 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		7BDCC33A21D178A1004C4853 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 		7B9D937A21CFC11D00703C87 /* Hey Beach */ = {
 			isa = PBXGroup;
 			children = (
-				7BCBF1A521D4FA4A00A7E0F8 /* New Group */,
+				7BCBF1A521D4FA4A00A7E0F8 /* Models */,
 				7BE3936B21D17F5D00CBB1C1 /* Application */,
 				7BE3936A21D17F3F00CBB1C1 /* Storyboards */,
 				7BDCC33121D17218004C4853 /* Flows */,
@@ -159,12 +161,13 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
-		7BCBF1A521D4FA4A00A7E0F8 /* New Group */ = {
+		7BCBF1A521D4FA4A00A7E0F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				7BCBF1A621D4FC2000A7E0F8 /* ImagesDataSource.swift */,
+				7BCBF1A821D5041600A7E0F8 /* ImageViewCell.swift */,
 			);
-			path = "New Group";
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7BDCC33121D17218004C4853 /* Flows */ = {
@@ -371,6 +374,7 @@
 				7B9D939C21CFF20400703C87 /* HeyBeachApi.swift in Sources */,
 				7BE3939B21D3148100CBB1C1 /* NetworkService.swift in Sources */,
 				7BE3937C21D1853600CBB1C1 /* TabBarView.swift in Sources */,
+				7BCBF1A921D5041600A7E0F8 /* ImageViewCell.swift in Sources */,
 				7B9D93A621D0249600703C87 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
