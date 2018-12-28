@@ -15,6 +15,7 @@ protocol AuthViewInputs {
 
 protocol AuthViewOutputs {
     func userDidLogin()
+    func userDidNotLogin()
 }
 
 typealias AuthViewType = BaseView & AuthViewInputs & AuthViewOutputs

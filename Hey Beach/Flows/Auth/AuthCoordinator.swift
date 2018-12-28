@@ -25,7 +25,6 @@ final class AuthCoordinator: BaseCoordinator {
     private func showAuth() {
         var authView = factory.makeAuthView()
         let userService = service
-//        let user = User(email: "test2@test.com", password: "password")
         let completion = userCompletion(view: authView)
         
         authView.onLoginButtonTap = { user in
@@ -49,6 +48,7 @@ final class AuthCoordinator: BaseCoordinator {
             case .success:
                 view.userDidLogin()
             case let .failure(error):
+                view.userDidNotLogin()
                 print(error.localizedDescription)
             }
         }

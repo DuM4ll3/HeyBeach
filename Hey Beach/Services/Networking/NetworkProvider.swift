@@ -24,26 +24,34 @@ class NetworkProvider<Api: ApiType>: NetworkProviderType {
         let session = URLSession.shared
         let request = buildRequest(to: api)
         let task = session.dataTask(with: request) { (data, response, error) in
-            guard let httpResponse = response as? HTTPURLResponse,
-                (200 ..< 400) ~= httpResponse.statusCode,
-                error == nil else {
-                    completion(.error(error!))
-                    return
-            }
-            //TODO: move this elsewhere
-            if let jwt = httpResponse.allHeaderFields["x-auth"] as? String {
-                UserDefaults.standard.set(jwt, forKey: "authToken")
-            }
-            // TODO: refactor this
-            if api.path.contains("/images"),
-                let filename = api.path.split(separator: "/").last as NSString?,
-                let data = data {
-                let image = UIImage(data: data) ?? UIImage()
-                Cache.shared.setObject(image, forKey: filename)
-                print("\(filename) cached")
+            if let error = error {
+                completion(.error(error))
+                return
             }
             
-            completion(.success(data))
+            if let httpResponse = response as? HTTPURLResponse {
+                switch httpResponse.statusCode {
+                case 200...399:
+                    //TODO: move this elsewhere
+                    if let jwt = httpResponse.allHeaderFields["x-auth"] as? String {
+                        UserDefaults.standard.set(jwt, forKey: "authToken")
+                    }
+                    // TODO: refactor this
+                    if api.path.contains("/images"),
+                        let filename = api.path.split(separator: "/").last as NSString?,
+                        let data = data {
+                        let image = UIImage(data: data) ?? UIImage()
+                        ImageCache.shared.setObject(image, forKey: filename)
+                        print("\(filename) cached")
+                    }
+                    
+                    completion(.success(data))
+                    return
+                default:
+                    let genericError = NSError(domain: "Request failed", code: httpResponse.statusCode, userInfo: nil)
+                    completion(.error(genericError))
+                }
+            }
         }
         
         task.resume()
@@ -80,7 +88,7 @@ class NetworkProvider<Api: ApiType>: NetworkProviderType {
 }
 
 //TODO refactor this
-class Cache {
+class ImageCache {
     static var shared = NSCache<NSString, UIImage>()
     
     private init() {}

@@ -16,12 +16,19 @@ final class AuthViewController: UIViewController, AuthView {
     
     // MARK: Outputs
     func userDidLogin() {
-        print("Welcome \(emailTextField.text)")
+        welcomeLabel.text = String(format: "Welcome %@ 😀", emailTextField.text ?? "")
+        welcomeLabel.isHidden = false
+    }
+    
+    func userDidNotLogin() {
+        welcomeLabel.text = String(format: "Couldn't login/register %@ ☹️", emailTextField.text ?? "")
+        welcomeLabel.isHidden = false
     }
     
     // MARK: - ViewController
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var welcomeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +46,7 @@ final class AuthViewController: UIViewController, AuthView {
     }
     
     private func createUser() -> User? {
+        view.endEditing(true)
         guard
             let email = emailTextField.text,
             let password = passwordTextField.text,
