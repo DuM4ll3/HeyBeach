@@ -23,9 +23,13 @@ final class ImagesCoordinator: BaseCoordinator {
     }
     
     private func showImages() {
-        let imagesView = factory.makeImagesView()
+        var imagesView = factory.makeImagesView()
         let completion = imagesCompletion(view: imagesView)
-        service.getImages(completion)
+        service.getImages(at: 0, completion)
+        
+        imagesView.onLoadMoreImages = { [weak self] page in
+            self?.service.getImages(at: page, completion)
+        }
         
         router.push(imagesView)
     }

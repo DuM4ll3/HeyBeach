@@ -26,6 +26,7 @@ extension Decodable {
 
 extension UIImageView {
     func downloadImage(_ filename: String, with service: ImageServiceType = ImageService()) {
+        image = nil // or placeholder
         service.getPNG(filename: filename) { (image) in
             self.image = image
         }

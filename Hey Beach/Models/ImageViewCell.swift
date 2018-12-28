@@ -16,9 +16,7 @@ class ImageViewCell: UITableViewCell {
             guard let model = model else { return }
             
             titleLabel.text = model.name
-            if thumbImageView.image == nil {
-                thumbImageView.downloadImage(model.name)
-            }
+            thumbImageView.downloadImage(model.name)
         }
     }
 }

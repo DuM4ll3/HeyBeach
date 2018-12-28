@@ -7,7 +7,7 @@
 //
 
 class ImagesDataSource: NSObject {
-    let images: [Image]
+    var images: [Image]
     
     init(images: [Image]) {
         self.images = images

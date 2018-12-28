@@ -75,10 +75,7 @@ class NetworkProvider<Api: ApiType>: NetworkProviderType {
     
     private func configure(_ request: inout URLRequest, with parameters: Parameters) {
         var components = URLComponents(url: request.url!, resolvingAgainstBaseURL: false)
-        components?.queryItems = parameters.map { parameter in
-            return URLQueryItem(name: parameter.key, value: parameter.value as? String)
-        }
-        
+        components?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
         request.url = components?.url
     }
     

@@ -6,10 +6,14 @@
 //  Copyright © 2018 Rafael Ferraz. All rights reserved.
 //
 
+protocol ImagesViewInputs {
+    var onLoadMoreImages: ((Int) -> Void)? { get set }
+}
+
 protocol ImagesViewOutputs {
     func display(_ images: [Image])
 }
 
-typealias ImagesViewType = BaseView & ImagesViewOutputs
+typealias ImagesViewType = BaseView & ImagesViewInputs & ImagesViewOutputs
 
 protocol ImagesView: ImagesViewType {}

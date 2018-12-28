@@ -10,15 +10,15 @@ typealias ImageServiceCompletion = (ServiceResult<[Image]>) -> Void
 
 protocol ImageServiceType: NetworkService {
     /// get the list of images objects
-    func getImages(_ completion: @escaping ImageServiceCompletion)
+    func getImages(at page: Int, _ completion: @escaping ImageServiceCompletion)
     /// get a .png image
     func getPNG(filename: String, _ completion: @escaping (UIImage?) -> Void)
 }
 
 struct ImageService: ImageServiceType {
     
-    func getImages(_ completion: @escaping ImageServiceCompletion) {
-        heyBeach.request(.beaches(page: 1)) { (result) in
+    func getImages(at page: Int, _ completion: @escaping ImageServiceCompletion) {
+        heyBeach.request(.beaches(page: page)) { (result) in
             self.decode(result, for: [Image].self, completion: completion)
         }
     }
