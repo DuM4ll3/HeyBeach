@@ -28,7 +28,7 @@ struct ImageService: ImageServiceType {
         if let filename = filename as NSString?,
             let image = ImageCache.shared.object(forKey: filename) {
             completion(image)
-            print("YOU GOT IT FROM CACHE")
+            print("got \(filename) from cache")
             return
         }
         
