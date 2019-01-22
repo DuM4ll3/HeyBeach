@@ -27,11 +27,20 @@ final class ImagesCoordinator: BaseCoordinator {
         let completion = imagesCompletion(view: imagesView)
         service.getImages(at: 0, completion)
         
-        imagesView.onLoadMoreImages = { [weak self] page in
-            self?.service.getImages(at: page, completion)
+        imagesView.onLoadMoreImages = { [unowned self] page in
+            self.service.getImages(at: page, completion)
         }
         
-        router.push(imagesView)
+        imagesView.onUserClick = { [unowned self] in
+            self.showDetails()
+        }
+        
+        router.setRootModule(imagesView)
+    }
+    
+    private func showDetails() {
+        let imageDetailsView = factory.makeImageDetails()
+        router.push(imageDetailsView)
     }
     
     private func imagesCompletion(view: ImagesView) -> (ServiceResult<[Image]>) -> Void {

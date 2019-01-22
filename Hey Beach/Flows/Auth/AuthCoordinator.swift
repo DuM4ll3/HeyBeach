@@ -39,7 +39,7 @@ final class AuthCoordinator: BaseCoordinator {
             userService.logout(completion)
         }
         
-        router.push(authView)
+        router.setRootModule(authView)
     }
     
     private func userCompletion(view: AuthView) -> (ServiceResult<User>) -> Void {

@@ -12,6 +12,7 @@ protocol AuthModuleFactory {
 
 protocol ImagesModuleFactory {
     func makeImagesView() -> ImagesView
+    func makeImageDetails() -> ImageDetailsView
 }
 
 final class ModuleFactory:
@@ -28,5 +29,9 @@ final class ModuleFactory:
     
     func makeImagesView() -> ImagesView {
         return ImagesViewController.fromStoryboard(.images)
+    }
+    
+    func makeImageDetails() -> ImageDetailsView {
+        return ImageDetailsViewController.fromStoryboard(.images)
     }
 }

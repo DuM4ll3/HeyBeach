@@ -22,6 +22,7 @@ final class ImagesViewController: UIViewController, ImagesView {
     // MARK: - ImagesView
     // MARK: Inputs
     var onLoadMoreImages: ((Int) -> Void)?
+    var onUserClick: (() -> Void)?
     // MARK: Outputs
     func display(_ images: [Image]) {
         // don't do nothing if images is empty
@@ -61,5 +62,9 @@ extension ImagesViewController: UITableViewDelegate {
             print("Loading more images at page \(nextPage)")
             nextPage += 1
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        onUserClick?()
     }
 }

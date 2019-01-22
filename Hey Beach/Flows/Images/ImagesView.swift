@@ -8,6 +8,7 @@
 
 protocol ImagesViewInputs {
     var onLoadMoreImages: ((Int) -> Void)? { get set }
+    var onUserClick: (() -> Void)? { get set }
 }
 
 protocol ImagesViewOutputs {

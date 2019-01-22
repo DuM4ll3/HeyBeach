@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B75595B21F7267D00B9C26C /* ImageDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B75595A21F7267D00B9C26C /* ImageDetailsView.swift */; };
+		7B75595D21F726DF00B9C26C /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B75595C21F726DF00B9C26C /* ImageDetailsViewController.swift */; };
 		7B9D937C21CFC11D00703C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D937B21CFC11D00703C87 /* AppDelegate.swift */; };
 		7B9D938121CFC11D00703C87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D937F21CFC11D00703C87 /* Main.storyboard */; };
 		7B9D938321CFC12000703C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9D938221CFC12000703C87 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B75595A21F7267D00B9C26C /* ImageDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsView.swift; sourceTree = "<group>"; };
+		7B75595C21F726DF00B9C26C /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
 		7B9D937821CFC11D00703C87 /* Hey Beach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey Beach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9D937B21CFC11D00703C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B9D938021CFC11D00703C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				7BDCC34421D17C01004C4853 /* ImagesView.swift */,
 				7BE3936821D17CC000CBB1C1 /* ImagesViewController.swift */,
 				7BE3939121D2C42600CBB1C1 /* ImagesCoordinator.swift */,
+				7B75595A21F7267D00B9C26C /* ImageDetailsView.swift */,
+				7B75595C21F726DF00B9C26C /* ImageDetailsViewController.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -356,10 +362,12 @@
 				7BE3938221D1896300CBB1C1 /* ModuleFactory.swift in Sources */,
 				7B9D93AA21D1023D00703C87 /* UserService.swift in Sources */,
 				7BE3938E21D2BD9000CBB1C1 /* TabBarCoordinator.swift in Sources */,
+				7B75595D21F726DF00B9C26C /* ImageDetailsViewController.swift in Sources */,
 				7BCBF1A721D4FC2000A7E0F8 /* ImagesDataSource.swift in Sources */,
 				7B9D93AC21D10D8100703C87 /* ImageService.swift in Sources */,
 				7BE3939221D2C42600CBB1C1 /* ImagesCoordinator.swift in Sources */,
 				7BE3938621D18CE200CBB1C1 /* Coordinator.swift in Sources */,
+				7B75595B21F7267D00B9C26C /* ImageDetailsView.swift in Sources */,
 				7B9D937C21CFC11D00703C87 /* AppDelegate.swift in Sources */,
 				7BDCC33E21D179C4004C4853 /* UIViewControllerExtensions.swift in Sources */,
 				7BE3936F21D1804500CBB1C1 /* Storyboards.swift in Sources */,
